@@ -1,0 +1,8 @@
+RUR'URU2R'U => Rubik's Cube transformation
+FR'U2yld2ME' => Rubik's Cube transformation
+zores => Unrecognized
+gbjgdg => Unrecognized
+L'U'LFL'U'LULF'L2ULU => Rubik's Cube transformation
+234.QK.57A.47JA => Bridge hand
+2456J.QK.57A.47JA => Bridge hand, semantically incorrect
+6542.KQ.75A.47JA => Unrecognized
