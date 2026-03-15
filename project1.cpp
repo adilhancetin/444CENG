@@ -31,19 +31,6 @@ void MyFlexLexer::reportToken(const char *label)
 
 MyFlexLexer *lexer = new MyFlexLexer();
 
-void write_chemical_result(const char *formula)
-{
-   int formula_length = (int)strlen(formula) - 2;
-
-   if(formula_length > 24){
-      output_file << formula << " => Chemical formula, semantically incorrect" << endl;
-      chem_legal++;
-      chem_legal_not_sem++;
-   } else {
-      output_file << formula << " => Chemical formula" << endl;
-      chem_legal++;
-   }
-}
 
 void check_ascending(){
    deck_number++;
@@ -92,6 +79,18 @@ void check_ascending(){
    is_bridge = false;
 }
 
+void write_chemical_result(const char *formula)
+{
+
+   if(strlen(formula) > 26){
+      output_file << formula << " => Chemical formula, semantically incorrect" << endl;
+      chem_legal++;
+      chem_legal_not_sem++;
+   } else {
+      output_file << formula << " => Chemical formula" << endl;
+      chem_legal++;
+   }
+}
 
 int main(int argc, char **argv)
 {

@@ -1,7 +1,7 @@
 # Steps to Run the Program
 
 ```bash
-flex -+ lexer_project1.l
+flex -+ project1lex.l
 ```
 
 ```bash
