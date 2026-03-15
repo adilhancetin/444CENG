@@ -97,7 +97,7 @@ int main(int argc, char **argv)
 {
    
    if(argc <= 1){
-      cout << "No input file is available." << endl;
+      cout << "File not found!" << endl;
       return 0;
    }
 
@@ -106,22 +106,23 @@ int main(int argc, char **argv)
    ifstream input_file(txt_file);
    output_file.open(out_file);
 
-   if(input_file.is_open()){
-
-      lexer->switch_streams(&input_file);
-      while(lexer->yylex() != 0){
-         if(is_bridge){
-            check_ascending();
-         }
-      }
-      if(is_bridge || deck_number > 0){
-         check_ascending();
-      }
-
-
-      input_file.close();
+   if(!input_file.is_open()){
+      cout << "File not found!" << endl;
+      output_file.close();
+      return 1;
    }
 
+   lexer->switch_streams(&input_file);
+   while(lexer->yylex() != 0){
+      if(is_bridge){
+         check_ascending();
+      }
+   }
+   if(is_bridge || deck_number > 0){
+      check_ascending();
+   }
+
+   input_file.close();
    output_file.close();
 
    cout << "# Rubik's Cube Transformations: " << cubic_legal << endl;

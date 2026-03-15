@@ -1,0 +1,13 @@
+# Steps to Run the Program
+
+```bash
+flex -+ lexer_project1.l
+```
+
+```bash
+g++ -o project1 lex.yy.cc project1.cpp
+```
+
+```bash
+./project1 <input_file>.txt
+```

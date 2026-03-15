@@ -1,9 +1,0 @@
-/H2SO4/ => Chemical formula
-/H2SO4OH2CH4H2SO4OH2CH4Ga3/ => Chemical formula, semantically incorrect
-/Na1OH/ => Unrecognized
-/TiO2/ => Chemical formula
-/TIO2/ => Unrecognized
-/Abc12De3/ => Unrecognized
-L'U'LFL'U'LULF'L2ULUxE2 => Rubik's Cube transformation
-U1 => Unrecognized
-234.QK.57A.47JA => Bridge hand
